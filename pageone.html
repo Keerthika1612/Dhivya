@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhivya Shree S | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;600&display=swap" rel="stylesheet">
+    
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            scroll-behavior: smooth;
+        }
+
+        .portfolio-bg {
+            background-image: 
+                linear-gradient(to right, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 100%),
+                url('bg.png'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            min-height: 100vh;
+            width: 100%;
+        }
+
+        .vertical-line {
+            position: absolute;
+            left: 5%;
+            top: 0;
+            width: 1px;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.2), transparent);
+            z-index: 10;
+        }
+
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        
+        .full-page-section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body class="text-white font-sans">
+    <nav class="fixed top-8 right-8 z-50 flex items-center space-x-4">
+        <a href="Resume.pdf" target="_blank" class="group flex items-center glass p-3 hover:border-blue-500/50 hover:bg-blue-500/10 transition-all" title="View Resume">
+            <i data-lucide="file-text" class="w-5 h-5 text-gray-400 group-hover:text-blue-400"></i>
+            <span class="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-3 transition-all duration-500 mono text-[10px] uppercase tracking-widest text-blue-400">CV</span>
+        </a>
+        <a href="#projects" class="group flex items-center glass p-3 hover:border-blue-500/50 hover:bg-blue-500/10 transition-all">
+            <i data-lucide="layers" class="w-5 h-5 text-gray-400 group-hover:text-blue-400"></i>
+            <span class="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-3 transition-all duration-500 mono text-[10px] uppercase tracking-widest text-blue-400">Projects</span>
+        </a>
+        <a href="#achievements" class="group flex items-center glass p-3 hover:border-blue-500/50 hover:bg-blue-500/10 transition-all">
+            <i data-lucide="trophy" class="w-5 h-5 text-gray-400 group-hover:text-blue-400"></i>
+            <span class="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-3 transition-all duration-500 mono text-[10px] uppercase tracking-widest text-blue-400">Achievements</span>
+        </a>
+        <a href="#certificates" class="group flex items-center glass p-3 hover:border-blue-500/50 hover:bg-blue-500/10 transition-all">
+            <i data-lucide="award" class="w-5 h-5 text-gray-400 group-hover:text-blue-400"></i>
+            <span class="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-3 transition-all duration-500 mono text-[10px] uppercase tracking-widest text-blue-400">Certificates</span>
+        </a>
+        <a href="#experience" class="group flex items-center glass p-3 hover:border-blue-500/50 hover:bg-blue-500/10 transition-all">
+            <i data-lucide="briefcase" class="w-5 h-5 text-gray-400 group-hover:text-blue-400"></i>
+            <span class="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-3 transition-all duration-500 mono text-[10px] uppercase tracking-widest text-blue-400">Experience</span>
+        </a>
+        <a href="mailto:dhivyashree.s5678@gmail.com" class="group flex items-center glass p-3 hover:border-blue-500/50 hover:bg-blue-500/10 transition-all">
+            <i data-lucide="mail" class="w-5 h-5 text-gray-400 group-hover:text-blue-400"></i>
+            <span class="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-3 transition-all duration-500 mono text-[10px] uppercase tracking-widest text-blue-400">Contact</span>
+        </a>
+    </nav>
+
+    <div class="portfolio-bg relative">
+        <div class="vertical-line hidden lg:block"></div>
+
+        <!-- HERO SECTION -->
+        <section id="hero" class="relative z-20 max-w-6xl mx-auto px-6 full-page-section lg:ml-[8%]">
+            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12">
+                
+                <!-- LEFT: Text Content -->
+                <div class="flex-1 space-y-8">
+                    <div class="flex flex-wrap items-center gap-6">
+                        <div class="inline-block px-3 py-1 border border-blue-500/50 text-blue-400 text-xs tracking-[0.3em] uppercase mono">
+                            Design Engineer
+                        </div>
+                        
+                        <div class="flex gap-6 items-center border-l border-white/20 pl-6">
+                            <a href="https://www.linkedin.com/in/sdhivyashree" target="_blank" class="text-gray-400 hover:text-blue-400 transition-all transform hover:scale-110">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                            </a>
+                            <a href="https://grabcad.com/dhivya.shree.s-2" target="_blank" class="text-gray-400 hover:text-blue-400 transition-all transform hover:scale-110">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
+                            </a>
+                            <a href="https://github.com/dhivyashrees5678-pixel" target="_blank" class="text-gray-400 hover:text-blue-400 transition-all transform hover:scale-110">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <h1 class="text-5xl lg:text-7xl font-bold tracking-tighter">
+                        Dhivya Shree S
+                    </h1>
+                    
+                    <div class="space-y-4">
+                        <p class="text-xl text-gray-400 leading-relaxed max-w-2xl font-light italic">
+                            "A passionate industrial designer who loves the challenge of solving complex electrical and mechanical CAD designs."
+                        </p>
+                        <p class="text-gray-300 leading-relaxed text-lg max-w-2xl">
+                            Expertise in <span class="text-white font-semibold underline decoration-blue-500/50">EV wire harness designs</span> and mechanical solid modeling. I bridge the gap between conceptual reasoning and real-world engineering solutions.
+                        </p>
+                    </div>
+
+                    <div class="glass p-8 max-w-lg relative overflow-hidden">
+                        <div class="absolute top-0 right-0 p-2 opacity-10">
+                            <i data-lucide="cpu" class="w-12 h-12"></i>
+                        </div>
+                        <h3 class="mono text-xs text-blue-400 mb-6 uppercase tracking-widest flex items-center">
+                            <span class="w-8 h-[1px] bg-blue-500/50 mr-3"></span> Technical Stack
+                        </h3>
+                        <div class="grid grid-cols-1 gap-4 text-sm">
+                            <p><span class="text-gray-500 mono mr-2">TOOLS:</span> CATIA V5 • AutoCAD • Fusion 360</p>
+                            <p><span class="text-gray-500 mono mr-2">SYSTEMS:</span> MATLAB • LabVIEW • Cura</p>
+                            <p><span class="text-gray-500 mono mr-2">SPECIALTY:</span> EV Wire Harness • Solid Modeling</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-4">
+                        <a href="Resume.pdf" target="_blank" class="resume-btn glass px-8 py-4 mono text-xs uppercase tracking-widest border border-blue-500/30 text-blue-400 transition-all flex items-center gap-3">
+                            <i data-lucide="download" class="w-4 h-4"></i>
+                            Download Resume
+                        </a>
+                    </div>
+
+                    <div class="animate-bounce opacity-30">
+                        <i data-lucide="chevron-down" class="w-6 h-6"></i>
+                    </div>
+                </div>
+
+                <!-- RIGHT: Profile Photo -->
+                <div class="flex-shrink-0 flex justify-center lg:justify-end lg:-mr-12 xl:-mr-24">
+                    <div class="relative group">
+                        <div class="glass p-2 rounded-full overflow-hidden hover:border-blue-500/50 transition-all duration-500 w-80 h-80 lg:w-[26rem] lg:h-[26rem]">
+                            <img src="dhivya.png" alt="Dhivya Shree S Profile" 
+                                class="w-full h-full object-cover object-top 
+                                       rounded-full
+                                       transition-all duration-500 transform group-hover:scale-105">
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 flex flex-col gap-2">
+                            <span class="mono text-[8px] bg-blue-500/20 text-blue-400 px-2 py-1 border border-blue-500/40 uppercase">ACTIVE</span>
+                            <span class="mono text-[8px] bg-white/5 text-gray-400 px-2 py-1 border border-white/10 uppercase">CHENNAI</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects" class="relative z-20 max-w-6xl mx-auto px-6 py-20 lg:ml-[8%]">
+            <div class="space-y-12">
+                <h3 class="mono text-xs text-blue-400 uppercase tracking-[0.4em] flex items-center">
+                    <i data-lucide="layers" class="w-4 h-4 mr-2"></i> Technical CAD Portfolio
+                </h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <a href="https://a360.co/4bkdSid" target="_blank" class="group glass relative overflow-hidden p-8 hover:border-blue-500/50 transition-all">
+                        <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-30 transition-opacity">
+                            <i data-lucide="external-link" class="w-12 h-12"></i>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="w-12 h-12 rounded bg-blue-500/10 flex items-center justify-center border border-blue-500/20">
+                                <i data-lucide="truck" class="text-blue-400 w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-2xl font-bold tracking-tight uppercase">CAT Excavator</h4>
+                                <p class="text-gray-400 text-sm mt-2 leading-relaxed">
+                                    Analyzed and designed the frontal area of the excavator. This model focuses on static device motion simulation of hydraulics within Autodesk Fusion 360.
+                                </p>
+                            </div>
+                            <div class="flex gap-2 pt-2">
+                                <span class="px-2 py-1 bg-white/5 border border-white/10 text-[9px] mono text-gray-400 uppercase">Hydraulics</span>
+                                <span class="px-2 py-1 bg-white/5 border border-white/10 text-[9px] mono text-gray-400 uppercase">Motion Simulation</span>
+                            </div>
+                        </div>
+                        <div class="mt-8 flex items-center text-blue-400 mono text-[10px] uppercase tracking-widest font-bold">
+                            View Fusion 360 Model <i data-lucide="arrow-up-right" class="w-3 h-3 ml-2"></i>
+                        </div>
+                    </a>
+
+                    <a href="https://drive.google.com/drive/folders/16MGwo6Fsr0Vsiuj4BKQbSEd5YDx6zx5V?usp=drive_link" target="_blank" class="group glass relative overflow-hidden p-8 hover:border-blue-500/50 transition-all">
+                        <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-30 transition-opacity">
+                            <i data-lucide="external-link" class="w-12 h-12"></i>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="w-12 h-12 rounded bg-blue-500/10 flex items-center justify-center border border-blue-500/20">
+                                <i data-lucide="battery-charging" class="text-blue-400 w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-2xl font-bold tracking-tight uppercase">Traction Battery Assembly</h4>
+                                <p class="text-gray-400 text-sm mt-2 leading-relaxed">
+                                    Focused on front EDU HVIL harness, ancillary HVIL harness, and intricate wire routings required for a high-voltage EV battery pack in CATIA V5.
+                                </p>
+                            </div>
+                            <div class="flex gap-2 pt-2">
+                                <span class="px-2 py-1 bg-white/5 border border-white/10 text-[9px] mono text-gray-400 uppercase">HVIL Harness</span>
+                                <span class="px-2 py-1 bg-white/5 border border-white/10 text-[9px] mono text-gray-400 uppercase">CATIA V5</span>
+                            </div>
+                        </div>
+                        <div class="mt-8 flex items-center text-blue-400 mono text-[10px] uppercase tracking-widest font-bold">
+                            View Project Assets <i data-lucide="arrow-up-right" class="w-3 h-3 ml-2"></i>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <a href="https://a360.co/4sBzEoA" target="_blank" class="group glass p-8 hover:border-blue-500/50 transition-all">
+                        <i data-lucide="cpu" class="text-blue-400 w-10 h-10 mb-6"></i>
+                        <h4 class="text-xl font-bold uppercase tracking-tight">V12 Engine Assembly</h4>
+                        <p class="text-gray-400 text-xs mt-2 leading-relaxed mb-6">Parametric 3D modeling of crankshaft, valvetrain, and cylinder block. Fully assembled and rendered in Fusion 360.</p>
+                        <div class="flex items-center text-blue-400 mono text-[9px] uppercase font-bold">
+                            View Render <i data-lucide="arrow-up-right" class="w-3 h-3 ml-2"></i>
+                        </div>
+                    </a>
+
+                    <a href="https://drive.google.com/drive/folders/1j8iTxN94FqIzuasm2hwoPV5DRuohEQcp?usp=drive_link" target="_blank" class="group glass p-8 hover:border-blue-500/50 transition-all">
+                        <i data-lucide="zap" class="text-blue-400 w-10 h-10 mb-6"></i>
+                        <h4 class="text-xl font-bold uppercase tracking-tight">EV Powertrain</h4>
+                        <p class="text-gray-400 text-xs mt-2 leading-relaxed mb-6">Harness design for front/rear motors and inverters, solving intricate routings with strict clearance requirements.</p>
+                        <div class="flex items-center text-blue-400 mono text-[9px] uppercase font-bold">
+                            View Routing <i data-lucide="arrow-up-right" class="w-3 h-3 ml-2"></i>
+                        </div>
+                    </a>
+
+                    <a href="https://drive.google.com/drive/folders/1PQViaiFLdiomoq4qV6xnQ32ubO9nsk44?usp=drive_link" target="_blank" class="group glass p-8 hover:border-blue-500/50 transition-all">
+                        <i data-lucide="flame" class="text-blue-400 w-10 h-10 mb-6"></i>
+                        <h4 class="text-xl font-bold uppercase tracking-tight">Motorsport Harness</h4>
+                        <p class="text-gray-400 text-xs mt-2 leading-relaxed mb-6">Sensor-to-ECU routing including thermal/pressure sensors and ECM integration for racing environments.</p>
+                        <div class="flex items-center text-blue-400 mono text-[9px] uppercase font-bold">
+                            View Design <i data-lucide="arrow-up-right" class="w-3 h-3 ml-2"></i>
+                        </div>
+                    </a>
+
+                    <a href="https://drive.google.com/drive/folders/18lahrMFQdPy57o2NJGWOx4w0Hh6i6LO4?usp=drive_link" target="_blank" class="group glass p-8 hover:border-blue-500/50 transition-all">
+                        <i data-lucide="cable" class="text-blue-400 w-10 h-10 mb-6"></i>
+                        <h4 class="text-xl font-bold uppercase tracking-tight">Low Voltage Harness</h4>
+                        <p class="text-gray-400 text-xs mt-2 leading-relaxed mb-6">BIW front cabinet and dashboard routing, managing complex connector placements and support parts.</p>
+                        <div class="flex items-center text-blue-400 mono text-[9px] uppercase font-bold">
+                            View BIW Model <i data-lucide="arrow-up-right" class="w-3 h-3 ml-2"></i>
+                        </div>
+                    </a>
+
+                    <a href="https://drive.google.com/drive/folders/16MGwo6Fsr0Vsiuj4BKQbSEd5YDx6zx5V?usp=drive_link" target="_blank" class="group glass p-8 hover:border-blue-500/50 transition-all">
+                        <i data-lucide="cog" class="text-blue-400 w-10 h-10 mb-6"></i>
+                        <h4 class="text-xl font-bold uppercase tracking-tight">Steam Engine</h4>
+                        <p class="text-gray-400 text-xs mt-2 leading-relaxed mb-6">Kinematic simulation and functional 3D part modeling within the CATIA DMU workbench.</p>
+                        <div class="flex items-center text-blue-400 mono text-[9px] uppercase font-bold">
+                            View Kinematics <i data-lucide="arrow-up-right" class="w-3 h-3 ml-2"></i>
+                        </div>
+                    </a>
+
+                    <a href="https://drive.google.com/drive/folders/1Quxn0ihH7wBjtfWx3OABfEJh8AAN_xx3?usp=drive_link" target="_blank" class="group glass p-8 hover:border-blue-500/50 transition-all">
+                        <i data-lucide="settings" class="text-blue-400 w-10 h-10 mb-6"></i>
+                        <h4 class="text-xl font-bold uppercase tracking-tight">Shredding Machine</h4>
+                        <p class="text-gray-400 text-xs mt-2 leading-relaxed mb-6">Mechanical simulation of rotational mechanisms for conventional industrial shredders.</p>
+                        <div class="flex items-center text-blue-400 mono text-[9px] uppercase font-bold">
+                            View Mechanism <i data-lucide="arrow-up-right" class="w-3 h-3 ml-2"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ACHIEVEMENTS SECTION -->
+        <section id="achievements" class="relative z-20 max-w-6xl mx-auto px-6 py-20 lg:ml-[8%]">
+            <div class="space-y-12">
+                <h3 class="mono text-xs text-blue-400 uppercase tracking-[0.4em] flex items-center">
+                    <i data-lucide="award" class="w-4 h-4 mr-2"></i> Recognitions & Awards
+                </h3>
+
+                <div class="grid grid-cols-1 gap-6">
+                    <div class="group glass p-8 border-l-2 border-l-blue-500 transition-all">
+                        <div class="flex flex-col md:flex-row justify-between items-start gap-6">
+                            <div class="space-y-4">
+                                <div class="flex items-center gap-3">
+                                    <span class="mono text-[10px] bg-blue-500 text-black font-bold px-2 py-1">2025</span>
+                                    <h4 class="text-xl font-bold uppercase tracking-tight">Smart India Hackathon – Grand Finalist (Hardware)</h4>
+                                </div>
+                                <p class="text-gray-400 text-sm leading-relaxed max-w-3xl">
+                                    <span class="text-white font-semibold italic">PS 25058:</span> Detection and prevention of tampering in weigh scales, fuel dispensers, and energy meters. Project powered by the <span class="text-blue-400">Ministry of Consumer Affairs</span>. Developed at Amaljyothi College of Engineering, Kerala.
+                                </p>
+                            </div>
+                            <a href="https://drive.google.com/drive/folders/1IX91F8EG6SxXCdcIshXK0zcpChAnhoDA?usp=drive_link" target="_blank" class="flex-shrink-0 px-4 py-2 border border-blue-500/30 text-blue-400 mono text-[10px] uppercase tracking-widest hover:bg-blue-500/10 transition-all">
+                                View Documentation
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="group glass p-8 border-l-2 border-l-emerald-500/50 transition-all">
+                        <div class="flex flex-col md:flex-row justify-between items-start gap-6">
+                            <div class="space-y-4">
+                                <div class="flex items-center gap-3">
+                                    <span class="mono text-[10px] bg-emerald-500 text-black font-bold px-2 py-1">AWARD</span>
+                                    <h4 class="text-xl font-bold uppercase tracking-tight">7th IEEE International Conference – Best Project</h4>
+                                </div>
+                                <p class="text-gray-400 text-sm leading-relaxed max-w-3xl">
+                                    Awarded for developing an <span class="text-white font-semibold">on-the-go turbine system</span> that converts wind energy into electricity. Showcased innovation in renewable energy harvesting and real-time power generation.
+                                </p>
+                            </div>
+                            <a href="https://drive.google.com/drive/folders/1QjmQF_XBAJg3yNSUdU98-EYBW9MT2Y7N?usp=drive_link" target="_blank" class="flex-shrink-0 px-4 py-2 border border-emerald-500/30 text-emerald-400 mono text-[10px] uppercase tracking-widest hover:bg-emerald-500/10 transition-all">
+                                View Research
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="group glass p-8 border-l-2 border-l-gray-700 transition-all">
+                        <div class="flex flex-col md:flex-row justify-between items-start gap-6">
+                            <div class="space-y-4">
+                                <div class="flex items-center gap-3">
+                                    <span class="mono text-[10px] bg-gray-700 text-white font-bold px-2 py-1">2024</span>
+                                    <h4 class="text-xl font-bold uppercase tracking-tight">Smart India Hackathon – Grand Finalist (Software)</h4>
+                                </div>
+                                <p class="text-gray-400 text-sm leading-relaxed max-w-3xl">
+                                    <span class="text-white font-semibold italic">PS 1603:</span> Design of an autonomous water surface cleaning robot. Leveraged <span class="text-blue-400">Autodesk Fusion 360</span> for structural modeling and buoyancy analysis. Held at VVCE, Mysore.
+                                </p>
+                            </div>
+                            <a href="https://drive.google.com/drive/folders/1g_IX--0ZsD50pgdyvL5EsabMY-qjQJ_p?usp=drive_link" target="_blank" class="flex-shrink-0 px-4 py-2 border border-white/10 text-gray-400 mono text-[10px] uppercase tracking-widest hover:bg-white/5 transition-all">
+                                View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CERTIFICATES SECTION -->
+        <section id="certificates" class="relative z-20 max-w-6xl mx-auto px-6 full-page-section lg:ml-[8%]">
+            <div class="py-20">
+                <h3 class="mono text-xs text-blue-400 mb-12 uppercase tracking-[0.4em] flex items-center">
+                    <i data-lucide="verified" class="w-4 h-4 mr-2"></i> Professional Certifications
+                </h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <a href="assets/simulink.jpeg" target="_blank" class="group glass overflow-hidden hover:border-blue-500/40 transition-all">
+                        <div class="h-40 bg-gray-900 overflow-hidden">
+                            <img src="assets/simulink.jpeg" class="w-full h-full object-cover opacity-50 group-hover:opacity-100 transition-opacity" alt="Simulink">
+                        </div>
+                        <div class="p-4">
+                            <h4 class="text-sm font-bold uppercase mono">Simulink System Design</h4>
+                            <p class="text-[9px] text-gray-500 mt-1 uppercase tracking-widest">MATLAB & Simulation</p>
+                        </div>
+                    </a>
+
+                    <a href="assets/Hv Harness.jpg" target="_blank" class="group glass overflow-hidden hover:border-blue-500/40 transition-all">
+                        <div class="h-40 bg-gray-900 overflow-hidden">
+                            <img src="assets/Hv Harness.jpg" class="w-full h-full object-cover opacity-50 group-hover:opacity-100 transition-opacity" alt="HV Harness">
+                        </div>
+                        <div class="p-4">
+                            <h4 class="text-sm font-bold uppercase mono">HV Wire Harness</h4>
+                            <p class="text-[9px] text-gray-500 mt-1 uppercase tracking-widest">EV Design Specialist</p>
+                        </div>
+                    </a>
+
+                    <a href="assets/nptel.jpg" target="_blank" class="group glass overflow-hidden hover:border-blue-500/40 transition-all">
+                        <div class="h-40 bg-gray-900 overflow-hidden">
+                            <img src="assets/nptel.jpg" class="w-full h-full object-cover opacity-50 group-hover:opacity-100 transition-opacity" alt="NPTEL">
+                        </div>
+                        <div class="p-4">
+                            <h4 class="text-sm font-bold uppercase mono">NPTEL Engineering</h4>
+                            <p class="text-[9px] text-gray-500 mt-1 uppercase tracking-widest">Academic Excellence</p>
+                        </div>
+                    </a>
+
+                    <a href="assets/matlab.png" target="_blank" class="group glass overflow-hidden hover:border-blue-500/40 transition-all">
+                        <div class="h-40 bg-gray-900 overflow-hidden">
+                            <img src="assets/matlab.png" class="w-full h-full object-cover opacity-50 group-hover:opacity-100 transition-opacity" alt="Matlab">
+                        </div>
+                        <div class="p-4">
+                            <h4 class="text-sm font-bold uppercase mono">MATLAB Proficiency</h4>
+                            <p class="text-[9px] text-gray-500 mt-1 uppercase tracking-widest">Numerical Computing</p>
+                        </div>
+                    </a>
+
+                    <a href="assets/Elect Wire Harness.jpg" target="_blank" class="group glass overflow-hidden hover:border-blue-500/40 transition-all">
+                        <div class="h-40 bg-gray-900 overflow-hidden">
+                            <img src="assets/Elect Wire Harness.jpg" class="w-full h-full object-cover opacity-50 group-hover:opacity-100 transition-opacity" alt="Electric Harness">
+                        </div>
+                        <div class="p-4">
+                            <h4 class="text-sm font-bold uppercase mono">Electrical Harnessing</h4>
+                            <p class="text-[9px] text-gray-500 mt-1 uppercase tracking-widest">Industrial Standards</p>
+                        </div>
+                    </a>
+
+                    <a href="assets/Beginner to Advanc.jpg" target="_blank" class="group glass overflow-hidden hover:border-blue-500/40 transition-all">
+                        <div class="h-40 bg-gray-900 overflow-hidden">
+                            <img src="assets/Beginner to Advanc.jpg" class="w-full h-full object-cover opacity-50 group-hover:opacity-100 transition-opacity" alt="Advanced Design">
+                        </div>
+                        <div class="p-4">
+                            <h4 class="text-sm font-bold uppercase mono">Comprehensive CAD</h4>
+                            <p class="text-[9px] text-gray-500 mt-1 uppercase tracking-widest">Beginner to Advanced</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE SECTION -->
+        <section id="experience" class="relative z-20 max-w-6xl mx-auto px-6 py-20 lg:ml-[8%]">
+            <div class="space-y-12">
+                <h3 class="mono text-xs text-blue-400 uppercase tracking-[0.4em] flex items-center">
+                    <i data-lucide="briefcase" class="w-4 h-4 mr-2"></i> Professional Journey
+                </h3>
+
+                <div class="space-y-4">
+                    <div class="group glass p-6 border-l-2 border-l-blue-500 bg-blue-500/5 transition-all">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                            <div>
+                                <h4 class="text-xl font-bold uppercase tracking-tight text-white">Electric Vehicle Trainer</h4>
+                                <p class="text-blue-400 mono text-[10px] uppercase tracking-wider">NSIC, Chennai • Present</p>
+                            </div>
+                            <span class="px-3 py-1 bg-blue-500 text-black mono text-[9px] font-bold uppercase">Active Role</span>
+                        </div>
+                    </div>
+
+                    <div class="group glass p-6 border-l-2 border-l-white/10 hover:border-l-blue-500/50 transition-all">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                            <div>
+                                <h4 class="text-lg font-bold uppercase tracking-tight text-gray-200">Engineering Intern</h4>
+                                <p class="text-gray-500 mono text-[10px] uppercase tracking-wider">TANGEDCO, Theni • Dec 2025 – Jan 2026 (21 Days)</p>
+                            </div>
+                            <i data-lucide="bolt" class="text-white/10 w-6 h-6 group-hover:text-blue-400 transition-colors"></i>
+                        </div>
+                    </div>
+
+                    <div class="group glass p-6 border-l-2 border-l-white/10 hover:border-l-blue-500/50 transition-all">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                            <div>
+                                <h4 class="text-lg font-bold uppercase tracking-tight text-gray-200">Engineering Intern</h4>
+                                <p class="text-gray-500 mono text-[10px] uppercase tracking-wider">Chennai Port Authority • June 2025 (15 Days)</p>
+                            </div>
+                            <i data-lucide="anchor" class="text-white/10 w-6 h-6 group-hover:text-blue-400 transition-colors"></i>
+                        </div>
+                    </div>
+
+                    <div class="group glass p-6 border-l-2 border-l-white/10 hover:border-l-blue-500/50 transition-all">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                            <div>
+                                <h4 class="text-lg font-bold uppercase tracking-tight text-gray-200">Electric Vehicle Intern</h4>
+                                <p class="text-gray-500 mono text-[10px] uppercase tracking-wider">NSIC • May 2025 (5 Days)</p>
+                            </div>
+                            <i data-lucide="battery-charging" class="text-white/10 w-6 h-6 group-hover:text-blue-400 transition-colors"></i>
+                        </div>
+                    </div>
+
+                    <div class="group glass p-6 border-l-2 border-l-white/10 hover:border-l-blue-500/50 transition-all">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                            <div>
+                                <h4 class="text-lg font-bold uppercase tracking-tight text-gray-200">Electrical & Manufacturing Intern</h4>
+                                <p class="text-gray-500 mono text-[10px] uppercase tracking-wider">Aavin Dairy Industry • Jan 2025 (7 Days)</p>
+                            </div>
+                            <i data-lucide="factory" class="text-white/10 w-6 h-6 group-hover:text-blue-400 transition-colors"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
